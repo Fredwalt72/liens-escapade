@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speyrit — Escapade</title>
+<style>
+  body { margin:0; font-family: system-ui, sans-serif; background: linear-gradient(160deg, #0A5C6E, #072A35); color:#fff; min-height:100vh; display:flex; align-items:center; justify-content:center; }
+  .carte { text-align:center; padding:32px 22px; max-width:420px; }
+  img.logo { width:170px; height:170px; object-fit:contain; }
+  h1 { font-size:27px; margin:14px 0 2px; }
+  .sous { color:#ffd9a0; margin:0 0 26px; font-size:16px; }
+  .intro { color:#dcebf0; font-size:16px; line-height:1.45; }
+  a.bouton { display:block; background:#E8A33D; color:#072A35; font-weight:700; font-size:19px; padding:16px 18px; border-radius:14px; text-decoration:none; margin:22px 0 12px; }
+  a.bouton2 { display:block; background:transparent; color:#fff; border:2px solid #ffffff88; font-weight:600; font-size:16px; padding:13px 18px; border-radius:14px; text-decoration:none; margin:10px 0; }
+  .note { color:#b9cfd8; font-size:14px; line-height:1.5; margin-top:18px; }
+</style>
+</head>
+<body>
+<div class="carte">
+  <img class="logo" src="../logos/logo-speyrit.png" alt="Logo de Speyrit">
+  <h1>Speyrit</h1>
+  <p class="sous">École de pêche à la mouche · Ferland-et-Boilleau</p>
+  <p class="intro">Cette entreprise vous accueille avec l'application <strong>Escapade</strong> : votre sortie, vos photos, votre souvenir.</p>
+  <a class="bouton" href="escapade://e/speyrit?c=Vincent">📲 Ouvrir dans l'application</a>
+  <div id="zone-magasin"></div>
+  <p class="note">Vous n'avez pas encore l'application ? Installez-la, puis <strong>scannez de nouveau le code à bord</strong> : vous entrerez directement dans la section de Speyrit.</p>
+</div>
+<script>
+  // À la publication sur Google Play : mettre ici l'adresse de la fiche
+  // de l'application ; le bouton de téléchargement apparaîtra tout seul.
+  var LIEN_MAGASIN = "";
+  if (LIEN_MAGASIN) {
+    var a = document.createElement("a");
+    a.className = "bouton2"; a.href = LIEN_MAGASIN; a.textContent = "Télécharger l'application";
+    document.getElementById("zone-magasin").appendChild(a);
+  }
+</script>
+</body>
+</html>
